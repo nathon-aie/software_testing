@@ -27,3 +27,28 @@ class PrimeListTest(unittest.TestCase):
         prime_list = [15, 16, 18]
         is_prime = is_prime_list(prime_list)
         self.assertFalse(is_prime)
+
+    def test_give_empty_list_is_not_prime(self):
+        prime_list = []
+        is_prime = is_prime_list(prime_list)
+        self.assertFalse(is_prime)
+
+    def test_give_non_integer_list_is_not_prime(self):
+        prime_list = ["a", "b", "c"]
+        is_prime = is_prime_list(prime_list)
+        self.assertFalse(is_prime)
+
+    def test_give_mixed_list_is_not_prime(self):
+        prime_list = [2, "a", 3]
+        is_prime = is_prime_list(prime_list)
+        self.assertFalse(is_prime)
+
+    def test_give_negative_numbers_is_not_prime(self):
+        prime_list = [-2, -3, -5]
+        is_prime = is_prime_list(prime_list)
+        self.assertFalse(is_prime)
+
+    def test_give_large_prime_numbers_is_prime(self):
+        prime_list = [101, 103, 107]
+        is_prime = is_prime_list(prime_list)
+        self.assertTrue(is_prime)
