@@ -12,5 +12,3 @@ def is_prime_list(numbers):
         return True
     except TypeError:
         return False
-    except ValueError:
-        return False

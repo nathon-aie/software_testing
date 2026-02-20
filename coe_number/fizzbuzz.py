@@ -10,5 +10,3 @@ def fizzbuzz(n):
             return n
     except TypeError:
         return "Invalid Input"
-    except ValueError:
-        return "Invalid Input"

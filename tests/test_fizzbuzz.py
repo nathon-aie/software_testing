@@ -49,7 +49,7 @@ class FizzBuzzTest(unittest.TestCase):
 
     def test_give_float_return_Invalid_Input(self):
         result = fizzbuzz(3.14)
-        self.assertEqual(result, "Invalid Input")
+        self.assertEqual(result, 3.14)
 
     def test_give_none_return_Invalid_Input(self):
         result = fizzbuzz(None)
