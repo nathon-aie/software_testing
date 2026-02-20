@@ -42,3 +42,15 @@ class FizzBuzzTest(unittest.TestCase):
     def test_give_0_return_FizzBuzz(self):
         result = fizzbuzz(0)
         self.assertEqual(result, "FizzBuzz")
+
+    def test_give_string_return_Invalid_Input(self):
+        result = fizzbuzz("string")
+        self.assertEqual(result, "Invalid Input")
+
+    def test_give_float_return_Invalid_Input(self):
+        result = fizzbuzz(3.14)
+        self.assertEqual(result, "Invalid Input")
+
+    def test_give_none_return_Invalid_Input(self):
+        result = fizzbuzz(None)
+        self.assertEqual(result, "Invalid Input")
